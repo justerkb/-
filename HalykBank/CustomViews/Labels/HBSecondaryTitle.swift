@@ -1,24 +1,23 @@
 //
-//  HBSecondaryBodyLabel.swift
+//  HBSecondaryTitle.swift
 //  HalykBank
 //
-//  Created by Yerkebulan on 04.08.2024.
+//  Created by Yerkebulan on 06.08.2024.
 //
 
 import UIKit
 
-class HBSecondaryBodyLabel: UILabel {
+class HBSecondaryTitle: UILabel {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
         configureLabel()
     }
     
-    init(textAligment: NSTextAlignment, text: String, color: UIColor) {
+    init(textAligment: NSTextAlignment, text: String) {
         super.init(frame: .zero)
         self.textAlignment = textAligment
         self.text = text
-        self.textColor = color
         configureLabel()
     }
     
@@ -27,8 +26,10 @@ class HBSecondaryBodyLabel: UILabel {
     }
     
     private func configureLabel() {
-        self.font = .systemFont(ofSize: 12)
+        self.textColor = .primary1
+        self.font = .systemFont(ofSize: 24, weight: .bold)
         translatesAutoresizingMaskIntoConstraints = false
     }
+
 
 }

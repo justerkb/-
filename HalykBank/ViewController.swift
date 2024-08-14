@@ -8,27 +8,54 @@
 import UIKit
 
 class ViewController: UIViewController {
+    private let signInLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = "Sign In"
+        label.font = UIFont.systemFont(ofSize: 20, weight: .bold)
+        label.textColor = .white
+        return label
+    }()
+    
     private let whiteView         = UIView()
     private let welcomeTitle      = HBTitleLabel(textAligment: .left, text: "Welcome Back")
     private let backArrow         = UIImage(named: "arrow-down-sign-to-navigate")
-    private let welcomeMessage    = HBSecondaryBodyLabel(textAligment: .left, text: "Hello there, sign in to continue")
+    private let welcomeMessage    = HBSecondaryBodyLabel(textAligment: .left, text: "Hello there, sign in to continue", color: .black)
     private let signInImage       = UIImageView(image: UIImage(named: "Illustration"))
     private let usernameTextField = HBTextField(title: "Username")
     private let passwordTextField = HBTextField(title: "Password")
-    private let forgotPasswordMessage = HBSecondaryBodyLabel(textAligment: .right, text: "Forgot your password ?")
+    private let forgotPasswordMessage = HBSecondaryBodyLabel(textAligment: .right, text: "Forgot your password ?", color: .systemGray)
     private let signInButton      = HBButton(title: "Sign in")
     private let fingerImage       = UIImageView(image: UIImage(named: "Fingerprint"))
+    private let noAccountLabel    = HBSecondaryBodyLabel(textAligment: .right, text: "Don't have an account?", color: .black)
+    private let sigUpLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = "Sign Up"
+        label.font = UIFont.systemFont(ofSize: 12, weight: .semibold)
+        label.textColor = .primary1
+        label.textAlignment = .center
+        return label
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .primary1
+        navigationItem.largeTitleDisplayMode = .always
+        configureLeftBarButton()
+        setupSignInLabel()
         setupWhiteView()
         setupWelcomeLabels()
         setupSignInImage()
         setupTextFields()
         setUpForgorPasswordMessage()
         setupSignInButton()
-//        setUpFingerImage()
+        setupFingerImage()
+        setUpSignUpLabels()
+    }
+    
+    private func configureSignInLabel() {
+        
     }
     
     private func setupWhiteView() {
@@ -37,7 +64,7 @@ class ViewController: UIViewController {
         whiteView.backgroundColor = .white
         whiteView.layer.cornerRadius = 30
         NSLayoutConstraint.activate([
-            whiteView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 68),
+            whiteView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 15),
             whiteView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             whiteView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             whiteView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 30)
@@ -121,16 +148,35 @@ class ViewController: UIViewController {
         ])
     }
     
-//    private func setUpFingerImage() {
-//        whiteView.addSubview(fingerImage)
-//        
-//        NSLayoutConstraint.activate([
-//            fingerImage.topAnchor.constraint(equalTo: signInButton.bottomAnchor, constant: 24),
-//            fingerImage.centerXAnchor.constraint(equalTo: whiteView.centerXAnchor),
-//            fingerImage.heightAnchor.constraint(equalToConstant: 44),
-//            fingerImage.widthAnchor.constraint(equalToConstant: 44)
-//        ])
-//    }
+    private func setupFingerImage() {
+           whiteView.addSubview(fingerImage)
+           
+           fingerImage.translatesAutoresizingMaskIntoConstraints = false
+           
+           NSLayoutConstraint.activate([
+               fingerImage.topAnchor.constraint(equalTo: signInButton.bottomAnchor, constant: 20),
+               fingerImage.centerXAnchor.constraint(equalTo: whiteView.centerXAnchor),
+               fingerImage.heightAnchor.constraint(equalToConstant: 44),
+               fingerImage.widthAnchor.constraint(equalToConstant: 44)
+           ])
+       }
+    
+    private func setUpSignUpLabels() {
+        whiteView.addSubview(sigUpLabel)
+        
+        NSLayoutConstraint.activate([
+            sigUpLabel.topAnchor.constraint(equalTo: fingerImage.bottomAnchor, constant:24),
+            sigUpLabel.leadingAnchor.constraint(equalTo: whiteView.leadingAnchor),
+            sigUpLabel.trailingAnchor.constraint(equalTo: whiteView.trailingAnchor),
+            sigUpLabel.heightAnchor.constraint(equalToConstant: 16)
+        ])
+    }
+    
+    private func configureLeftBarButton() {
+        let leftButton = UIBarButtonItem(image: UIImage(systemName: "chevron.left"))
+        let leftView = UIBarButtonItem(customView: signInLabel)
+        navigationItem.leftBarButtonItems = [leftButton, leftView]
+    }
     
 }
 

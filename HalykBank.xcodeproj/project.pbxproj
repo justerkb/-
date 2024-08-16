@@ -12,7 +12,8 @@
 		3982E6122C5FD3D60099AAF0 /* HBSecondaryBodyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3982E6112C5FD3D60099AAF0 /* HBSecondaryBodyLabel.swift */; };
 		3982E6162C5FE7E20099AAF0 /* HBTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3982E6152C5FE7E20099AAF0 /* HBTextField.swift */; };
 		3982E6192C60DBBC0099AAF0 /* HBButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3982E6182C60DBBC0099AAF0 /* HBButton.swift */; };
-		3982E61B2C60E2C40099AAF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3982E61A2C60E2C40099AAF0 /* Assets.xcassets */; };
+		399140882C6D07C30069F187 /* HBCaptionLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399140872C6D07C30069F187 /* HBCaptionLabel.swift */; };
+		39AB29AC2C6D2BBC00ACC963 /* Assets.xcassets 23-15-11-158.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39AB29AB2C6D2BBC00ACC963 /* Assets.xcassets 23-15-11-158.xcassets */; };
 		39AD74922C6CAC6F002E4BF1 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39AD74912C6CAC6F002E4BF1 /* SignUpVC.swift */; };
 		39B641862C5E3563007BCA2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B641852C5E3563007BCA2B /* AppDelegate.swift */; };
 		39B641882C5E3563007BCA2B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B641872C5E3563007BCA2B /* SceneDelegate.swift */; };
@@ -27,7 +28,8 @@
 		3982E6112C5FD3D60099AAF0 /* HBSecondaryBodyLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HBSecondaryBodyLabel.swift; sourceTree = "<group>"; };
 		3982E6152C5FE7E20099AAF0 /* HBTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HBTextField.swift; sourceTree = "<group>"; };
 		3982E6182C60DBBC0099AAF0 /* HBButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HBButton.swift; sourceTree = "<group>"; };
-		3982E61A2C60E2C40099AAF0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		399140872C6D07C30069F187 /* HBCaptionLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HBCaptionLabel.swift; sourceTree = "<group>"; };
+		39AB29AB2C6D2BBC00ACC963 /* Assets.xcassets 23-15-11-158.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Assets.xcassets 23-15-11-158.xcassets"; sourceTree = "<group>"; };
 		39AD74912C6CAC6F002E4BF1 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		39B641822C5E3563007BCA2B /* HalykBank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HalykBank.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39B641852C5E3563007BCA2B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 				3982E60D2C5FCC390099AAF0 /* HBTitleLabel.swift */,
 				3982E6112C5FD3D60099AAF0 /* HBSecondaryBodyLabel.swift */,
 				395A31032C628E20005551C3 /* HBSecondaryTitle.swift */,
+				399140872C6D07C30069F187 /* HBCaptionLabel.swift */,
 			);
 			path = Labels;
 			sourceTree = "<group>";
@@ -112,7 +115,7 @@
 				39B6418B2C5E3563007BCA2B /* Main.storyboard */,
 				39B641902C5E3565007BCA2B /* LaunchScreen.storyboard */,
 				39B641932C5E3565007BCA2B /* Info.plist */,
-				3982E61A2C60E2C40099AAF0 /* Assets.xcassets */,
+				39AB29AB2C6D2BBC00ACC963 /* Assets.xcassets 23-15-11-158.xcassets */,
 			);
 			path = HalykBank;
 			sourceTree = "<group>";
@@ -176,7 +179,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				39B641922C5E3565007BCA2B /* LaunchScreen.storyboard in Resources */,
-				3982E61B2C60E2C40099AAF0 /* Assets.xcassets in Resources */,
+				39AB29AC2C6D2BBC00ACC963 /* Assets.xcassets 23-15-11-158.xcassets in Resources */,
 				39B6418D2C5E3563007BCA2B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -191,6 +194,7 @@
 				39B6418A2C5E3563007BCA2B /* ViewController.swift in Sources */,
 				39AD74922C6CAC6F002E4BF1 /* SignUpVC.swift in Sources */,
 				3982E60E2C5FCC390099AAF0 /* HBTitleLabel.swift in Sources */,
+				399140882C6D07C30069F187 /* HBCaptionLabel.swift in Sources */,
 				39B641862C5E3563007BCA2B /* AppDelegate.swift in Sources */,
 				3982E6162C5FE7E20099AAF0 /* HBTextField.swift in Sources */,
 				3982E6192C60DBBC0099AAF0 /* HBButton.swift in Sources */,

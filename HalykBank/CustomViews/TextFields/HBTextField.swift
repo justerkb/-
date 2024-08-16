@@ -23,7 +23,7 @@ class HBTextField: UITextField {
         translatesAutoresizingMaskIntoConstraints = false
         layer.cornerRadius                        = 15
         layer.borderWidth                         = 1
-        textColor                                 = .black // should be neutral4
+        textColor                                 = .neutral
         textAlignment                             = .left
         adjustsFontSizeToFitWidth                 = true
         autocorrectionType                        = .no
@@ -35,7 +35,7 @@ class HBTextField: UITextField {
         autocapitalizationType                    = .none
         isUserInteractionEnabled                  = true
 
-        attributedPlaceholder                     = NSAttributedString(string: placeholder, attributes: [NSAttributedString.Key.foregroundColor : UIColor.systemGray])
+        attributedPlaceholder                     = NSAttributedString(string: placeholder, attributes: [NSAttributedString.Key.foregroundColor : UIColor.neutral4])
         
     }
     

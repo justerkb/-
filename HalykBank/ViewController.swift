@@ -8,7 +8,9 @@
 import UIKit
 
 class ViewController: UIViewController {
-    private let signInLabel: UILabel = {
+    private let whiteView         = UIView()
+
+    private let titleLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "Sign In"
@@ -17,33 +19,59 @@ class ViewController: UIViewController {
         return label
     }()
     
-    private let whiteView         = UIView()
     private let welcomeTitle      = HBTitleLabel(textAligment: .left, text: "Welcome Back")
-    private let backArrow         = UIImage(named: "arrow-down-sign-to-navigate")
-    private let welcomeMessage    = HBSecondaryBodyLabel(textAligment: .left, text: "Hello there, sign in to continue", color: .black)
+    
+    private let welcomeMessage: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textAlignment = .left
+        label.font = UIFont.systemFont(ofSize: 12, weight: .medium)
+        label.textColor = .neutral
+        label.text = "Hello there, sign in to continue"
+        return label
+    }()
+    
     private let signInImage       = UIImageView(image: UIImage(named: "Illustration"))
     private let usernameTextField = HBTextField(title: "Username")
     private let passwordTextField = HBTextField(title: "Password")
-    private let forgotPasswordMessage = HBSecondaryBodyLabel(textAligment: .right, text: "Forgot your password ?", color: .systemGray)
+    
+    private let forgotPasswordMessage: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textAlignment = .right
+        label.font = UIFont.systemFont(ofSize: 12, weight: .medium)
+        label.textColor = .neutral4
+        label.text = "Forgot your password ?"
+        return label
+    }()
+    
     private let signInButton      = HBButton(title: "Sign in")
     private let fingerImage       = UIImageView(image: UIImage(named: "Fingerprint"))
-    private let noAccountLabel    = HBSecondaryBodyLabel(textAligment: .right, text: "Don't have an account?", color: .black)
+    private let noAccountLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textAlignment = .right
+        label.font = UIFont.systemFont(ofSize: 12, weight: .regular)
+        label.textColor = .neutral
+        label.text = "Forgot your password ?"
+        return label
+    }()
+    
     private let sigUpLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "Sign Up"
         label.font = UIFont.systemFont(ofSize: 12, weight: .semibold)
         label.textColor = .primary1
-        label.textAlignment = .center
+        label.textAlignment = .left
         return label
     }()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .primary1
-        navigationItem.largeTitleDisplayMode = .always
         configureLeftBarButton()
-        setupSignInLabel()
         setupWhiteView()
         setupWelcomeLabels()
         setupSignInImage()
@@ -54,8 +82,11 @@ class ViewController: UIViewController {
         setUpSignUpLabels()
     }
     
-    private func configureSignInLabel() {
-        
+    private func configureLeftBarButton() {
+        let leftButton = UIBarButtonItem(image: UIImage(systemName: "chevron.left"))
+        leftButton.tintColor = .white
+        let leftView = UIBarButtonItem(customView: titleLabel)
+        navigationItem.leftBarButtonItems = [leftButton, leftView]
     }
     
     private func setupWhiteView() {
@@ -82,7 +113,6 @@ class ViewController: UIViewController {
             welcomeTitle.leadingAnchor.constraint(equalTo: whiteView.leadingAnchor, constant: 24),
             welcomeTitle.trailingAnchor.constraint(equalTo: whiteView.trailingAnchor, constant: -24),
             
-//            welcomeMessage.heightAnchor.constraint(equalToConstant: 16),
             welcomeMessage.leadingAnchor.constraint(equalTo: whiteView.leadingAnchor, constant: 24),
             welcomeMessage.trailingAnchor.constraint(equalTo: whiteView.trailingAnchor, constant: -24),
             welcomeMessage.topAnchor.constraint(equalTo: welcomeTitle.bottomAnchor, constant: 4),
@@ -90,10 +120,6 @@ class ViewController: UIViewController {
 
             
         ])
-    }
-    
-    private func setupSignInLabel() {
-        
     }
     
     private func setupSignInImage() {
@@ -112,6 +138,8 @@ class ViewController: UIViewController {
     private func setupTextFields() {
         whiteView.addSubview(usernameTextField)
         whiteView.addSubview(passwordTextField)
+        
+        passwordTextField.isSecureTextEntry = true
         
         NSLayoutConstraint.activate([
             usernameTextField.topAnchor.constraint(equalTo: signInImage.bottomAnchor, constant: 32),
@@ -163,19 +191,18 @@ class ViewController: UIViewController {
     
     private func setUpSignUpLabels() {
         whiteView.addSubview(sigUpLabel)
+        whiteView.addSubview(noAccountLabel)
         
         NSLayoutConstraint.activate([
+            noAccountLabel.leadingAnchor.constraint(equalTo: whiteView.leadingAnchor, constant: 88),
+            noAccountLabel.topAnchor.constraint(equalTo: fingerImage.bottomAnchor, constant: 24),
+            noAccountLabel.heightAnchor.constraint(equalToConstant: 16),
+            
             sigUpLabel.topAnchor.constraint(equalTo: fingerImage.bottomAnchor, constant:24),
-            sigUpLabel.leadingAnchor.constraint(equalTo: whiteView.leadingAnchor),
+            sigUpLabel.leadingAnchor.constraint(equalTo: noAccountLabel.trailingAnchor, constant: 12),
             sigUpLabel.trailingAnchor.constraint(equalTo: whiteView.trailingAnchor),
             sigUpLabel.heightAnchor.constraint(equalToConstant: 16)
         ])
-    }
-    
-    private func configureLeftBarButton() {
-        let leftButton = UIBarButtonItem(image: UIImage(systemName: "chevron.left"))
-        let leftView = UIBarButtonItem(customView: signInLabel)
-        navigationItem.leftBarButtonItems = [leftButton, leftView]
     }
     
 }
@@ -189,4 +216,5 @@ extension ViewController: UITextFieldDelegate {
         usernameTextField.resignFirstResponder()
         return true
     }
+    
 }

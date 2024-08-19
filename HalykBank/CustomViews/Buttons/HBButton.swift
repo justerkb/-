@@ -9,10 +9,10 @@ import UIKit
 
 class HBButton: UIButton {
     
-    init(title: String) {
+    init(title: String, color: UIColor) {
         super.init(frame: .zero)
         setTitle(title, for: .normal)
-        self.backgroundColor = .primary1
+        self.backgroundColor = color
         configure()
     }
     

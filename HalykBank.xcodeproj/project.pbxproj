@@ -17,7 +17,7 @@
 		39AD74922C6CAC6F002E4BF1 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39AD74912C6CAC6F002E4BF1 /* SignUpVC.swift */; };
 		39B641862C5E3563007BCA2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B641852C5E3563007BCA2B /* AppDelegate.swift */; };
 		39B641882C5E3563007BCA2B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B641872C5E3563007BCA2B /* SceneDelegate.swift */; };
-		39B6418A2C5E3563007BCA2B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B641892C5E3563007BCA2B /* ViewController.swift */; };
+		39B6418A2C5E3563007BCA2B /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B641892C5E3563007BCA2B /* SignInVC.swift */; };
 		39B6418D2C5E3563007BCA2B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39B6418B2C5E3563007BCA2B /* Main.storyboard */; };
 		39B641922C5E3565007BCA2B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39B641902C5E3565007BCA2B /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -34,7 +34,7 @@
 		39B641822C5E3563007BCA2B /* HalykBank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HalykBank.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39B641852C5E3563007BCA2B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		39B641872C5E3563007BCA2B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		39B641892C5E3563007BCA2B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		39B641892C5E3563007BCA2B /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
 		39B6418C2C5E3563007BCA2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		39B641912C5E3565007BCA2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		39B641932C5E3565007BCA2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -110,7 +110,7 @@
 				3982E60C2C5FCBDB0099AAF0 /* CustomViews */,
 				39B641852C5E3563007BCA2B /* AppDelegate.swift */,
 				39B641872C5E3563007BCA2B /* SceneDelegate.swift */,
-				39B641892C5E3563007BCA2B /* ViewController.swift */,
+				39B641892C5E3563007BCA2B /* SignInVC.swift */,
 				39AD74912C6CAC6F002E4BF1 /* SignUpVC.swift */,
 				39B6418B2C5E3563007BCA2B /* Main.storyboard */,
 				39B641902C5E3565007BCA2B /* LaunchScreen.storyboard */,
@@ -191,7 +191,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				39B6418A2C5E3563007BCA2B /* ViewController.swift in Sources */,
+				39B6418A2C5E3563007BCA2B /* SignInVC.swift in Sources */,
 				39AD74922C6CAC6F002E4BF1 /* SignUpVC.swift in Sources */,
 				3982E60E2C5FCC390099AAF0 /* HBTitleLabel.swift in Sources */,
 				399140882C6D07C30069F187 /* HBCaptionLabel.swift in Sources */,

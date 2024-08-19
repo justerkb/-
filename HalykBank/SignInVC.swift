@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class SignInVC: UIViewController{
     private let whiteView         = UIView()
 
     private let titleLabel: UILabel = {
@@ -45,15 +45,16 @@ class ViewController: UIViewController {
         return label
     }()
     
-    private let signInButton      = HBButton(title: "Sign in")
+    private let signInButton      = HBButton(title: "Sign in", color: .primary4)
     private let fingerImage       = UIImageView(image: UIImage(named: "Fingerprint"))
+    
     private let noAccountLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = .right
         label.font = UIFont.systemFont(ofSize: 12, weight: .regular)
         label.textColor = .neutral
-        label.text = "Forgot your password ?"
+        label.text = "Don't have an account?"
         return label
     }()
     
@@ -71,6 +72,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .primary1
+        usernameTextField.delegate = self
+        passwordTextField.delegate = self
+       
         configureLeftBarButton()
         setupWhiteView()
         setupWelcomeLabels()
@@ -168,6 +172,9 @@ class ViewController: UIViewController {
     private func setupSignInButton() {
         whiteView.addSubview(signInButton)
         
+        signInButton.addTarget(self, action: #selector(didTupSignInButton), for: .touchUpInside)
+        signInButton.isEnabled = false
+        
         NSLayoutConstraint.activate([
             signInButton.topAnchor.constraint(equalTo: forgotPasswordMessage.bottomAnchor, constant: 40),
             signInButton.leadingAnchor.constraint(equalTo: whiteView.leadingAnchor, constant: 24),
@@ -184,14 +191,18 @@ class ViewController: UIViewController {
            NSLayoutConstraint.activate([
                fingerImage.topAnchor.constraint(equalTo: signInButton.bottomAnchor, constant: 20),
                fingerImage.centerXAnchor.constraint(equalTo: whiteView.centerXAnchor),
-               fingerImage.heightAnchor.constraint(equalToConstant: 44),
-               fingerImage.widthAnchor.constraint(equalToConstant: 44)
+               fingerImage.heightAnchor.constraint(equalToConstant: 64),
+               fingerImage.widthAnchor.constraint(equalToConstant: 64)
            ])
        }
     
     private func setUpSignUpLabels() {
         whiteView.addSubview(sigUpLabel)
         whiteView.addSubview(noAccountLabel)
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(didTapSignUpLabel))
+        sigUpLabel.isUserInteractionEnabled = true
+        sigUpLabel.addGestureRecognizer(tap)
         
         NSLayoutConstraint.activate([
             noAccountLabel.leadingAnchor.constraint(equalTo: whiteView.leadingAnchor, constant: 88),
@@ -205,16 +216,49 @@ class ViewController: UIViewController {
         ])
     }
     
+    @objc func didTupSignInButton() {
+        let signUpVC = SignUpVC()
+        
+        self.navigationController?.pushViewController(signUpVC, animated: true)
+    }
+    
+    @objc func didTapSignUpLabel() {
+        let signUpVC = SignUpVC()
+        
+        self.navigationController?.pushViewController(signUpVC, animated: true)
+    }
 }
 
 #Preview {
-    UINavigationController(rootViewController: ViewController())
+    UINavigationController(rootViewController: SignInVC())
 }
 
-extension ViewController: UITextFieldDelegate {
+extension SignInVC: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        passwordTextField.resignFirstResponder()
         usernameTextField.resignFirstResponder()
         return true
     }
     
+    func textFieldDidChangeSelection(_ textField: UITextField) {
+        updateSignInButtonState()
+        print("cheking...")
+    }
+    
+    private func updateSignInButtonState() {
+        let isUsernameEmpty = usernameTextField.text?.isEmpty ?? true
+        let isPasswordEmpty = passwordTextField.text?.isEmpty ?? true
+            
+        print(isUsernameEmpty)
+        print(isPasswordEmpty)
+        
+        if isUsernameEmpty || isPasswordEmpty {
+            signInButton.backgroundColor = .primary4
+            signInButton.isEnabled = false
+        } else {
+            signInButton.backgroundColor = .primary1
+            signInButton.isEnabled = true
+        }
+    }
 }
+

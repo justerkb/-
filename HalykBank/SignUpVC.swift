@@ -56,17 +56,16 @@ class SignUpVC: UIViewController {
         return label
     }()
     
-    private let signUpButton      = HBButton(title: "Sign Up")
+    private let signUpButton      = HBButton(title: "Sign Up", color: .primary4)
     private let haveAccountLabel  = HBSecondaryBodyLabel(textAligment: .right, text: "Have an account?", color: .neutral)
     
-    private let sigInLabel: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Sign In"
-        label.font = UIFont.systemFont(ofSize: 12, weight: .semibold)
-        label.textColor = .primary1
-        label.textAlignment = .left
-        return label
+    private let signInButton: UIButton = {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setAttributedTitle(NSAttributedString("Sign in"), for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 12, weight: .semibold)
+        button.titleLabel?.textColor = .primary1
+        return button
     }()
     
     override func viewDidLoad() {
@@ -81,7 +80,7 @@ class SignUpVC: UIViewController {
         setUptoggleSwitch()
         setupTermsAndConditionsLabels()
         setupSignUpButton()
-        setUpSignInLabels()
+        setupSignInSection()
     }
     
     private func configureSignInLabel() {
@@ -178,8 +177,8 @@ class SignUpVC: UIViewController {
         ])
     }
     
-    private func setUpSignInLabels() {
-        whiteView.addSubview(sigInLabel)
+    private func setupSignInSection() {
+        whiteView.addSubview(signInButton)
         whiteView.addSubview(haveAccountLabel)
         
         NSLayoutConstraint.activate([
@@ -187,10 +186,10 @@ class SignUpVC: UIViewController {
             haveAccountLabel.topAnchor.constraint(equalTo: signUpButton.bottomAnchor, constant: 24),
             haveAccountLabel.heightAnchor.constraint(equalToConstant: 16),
             
-            sigInLabel.topAnchor.constraint(equalTo: signUpButton.bottomAnchor, constant:24),
-            sigInLabel.leadingAnchor.constraint(equalTo: haveAccountLabel.trailingAnchor, constant: 12),
-            sigInLabel.trailingAnchor.constraint(equalTo: whiteView.trailingAnchor),
-            sigInLabel.heightAnchor.constraint(equalToConstant: 16)
+            signInButton.topAnchor.constraint(equalTo: signUpButton.bottomAnchor, constant:24),
+            signInButton.leadingAnchor.constraint(equalTo: haveAccountLabel.trailingAnchor, constant: 12),
+            signInButton.trailingAnchor.constraint(equalTo: whiteView.trailingAnchor),
+            signInButton.heightAnchor.constraint(equalToConstant: 16)
         ])
     }
     

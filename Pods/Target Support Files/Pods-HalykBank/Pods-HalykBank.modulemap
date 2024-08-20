@@ -1,0 +1,6 @@
+framework module Pods_HalykBank {
+  umbrella header "Pods-HalykBank-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -14,15 +14,21 @@
 		3982E6192C60DBBC0099AAF0 /* HBButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3982E6182C60DBBC0099AAF0 /* HBButton.swift */; };
 		399140882C6D07C30069F187 /* HBCaptionLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399140872C6D07C30069F187 /* HBCaptionLabel.swift */; };
 		39AB29AC2C6D2BBC00ACC963 /* Assets.xcassets 23-15-11-158.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39AB29AB2C6D2BBC00ACC963 /* Assets.xcassets 23-15-11-158.xcassets */; };
-		39AD74922C6CAC6F002E4BF1 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39AD74912C6CAC6F002E4BF1 /* SignUpVC.swift */; };
+		39AD74922C6CAC6F002E4BF1 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39AD74912C6CAC6F002E4BF1 /* RegisterVC.swift */; };
 		39B641862C5E3563007BCA2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B641852C5E3563007BCA2B /* AppDelegate.swift */; };
 		39B641882C5E3563007BCA2B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B641872C5E3563007BCA2B /* SceneDelegate.swift */; };
-		39B6418A2C5E3563007BCA2B /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B641892C5E3563007BCA2B /* SignInVC.swift */; };
+		39B6418A2C5E3563007BCA2B /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B641892C5E3563007BCA2B /* LoginVC.swift */; };
 		39B6418D2C5E3563007BCA2B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39B6418B2C5E3563007BCA2B /* Main.storyboard */; };
 		39B641922C5E3565007BCA2B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39B641902C5E3565007BCA2B /* LaunchScreen.storyboard */; };
+		39F509942C74B441003180B8 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F509932C74B441003180B8 /* AuthService.swift */; };
+		39F509972C74B60A003180B8 /* RegisterUserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F509962C74B60A003180B8 /* RegisterUserRequest.swift */; };
+		39F509992C74B723003180B8 /* HBErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F509982C74B723003180B8 /* HBErrors.swift */; };
+		39F5099D2C74C0E3003180B8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 39F5099C2C74C0E3003180B8 /* GoogleService-Info.plist */; };
+		DF341D68E639BA543106FA1A /* Pods_HalykBank.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6966C21C2EFD92D846E6CFDB /* Pods_HalykBank.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		08CABC0308C99AAE64F1CB91 /* Pods-HalykBank.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HalykBank.release.xcconfig"; path = "Target Support Files/Pods-HalykBank/Pods-HalykBank.release.xcconfig"; sourceTree = "<group>"; };
 		395A31032C628E20005551C3 /* HBSecondaryTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HBSecondaryTitle.swift; sourceTree = "<group>"; };
 		3982E60D2C5FCC390099AAF0 /* HBTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HBTitleLabel.swift; sourceTree = "<group>"; };
 		3982E6112C5FD3D60099AAF0 /* HBSecondaryBodyLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HBSecondaryBodyLabel.swift; sourceTree = "<group>"; };
@@ -30,14 +36,20 @@
 		3982E6182C60DBBC0099AAF0 /* HBButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HBButton.swift; sourceTree = "<group>"; };
 		399140872C6D07C30069F187 /* HBCaptionLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HBCaptionLabel.swift; sourceTree = "<group>"; };
 		39AB29AB2C6D2BBC00ACC963 /* Assets.xcassets 23-15-11-158.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Assets.xcassets 23-15-11-158.xcassets"; sourceTree = "<group>"; };
-		39AD74912C6CAC6F002E4BF1 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
+		39AD74912C6CAC6F002E4BF1 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		39B641822C5E3563007BCA2B /* HalykBank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HalykBank.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39B641852C5E3563007BCA2B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		39B641872C5E3563007BCA2B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		39B641892C5E3563007BCA2B /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
+		39B641892C5E3563007BCA2B /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		39B6418C2C5E3563007BCA2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		39B641912C5E3565007BCA2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		39B641932C5E3565007BCA2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		39F509932C74B441003180B8 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		39F509962C74B60A003180B8 /* RegisterUserRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserRequest.swift; sourceTree = "<group>"; };
+		39F509982C74B723003180B8 /* HBErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HBErrors.swift; sourceTree = "<group>"; };
+		39F5099C2C74C0E3003180B8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		6966C21C2EFD92D846E6CFDB /* Pods_HalykBank.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HalykBank.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2E5B3B539C226244E60B505 /* Pods-HalykBank.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HalykBank.debug.xcconfig"; path = "Target Support Files/Pods-HalykBank/Pods-HalykBank.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,12 +57,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF341D68E639BA543106FA1A /* Pods_HalykBank.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		00CF6DB5B730DF2559EDD270 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6966C21C2EFD92D846E6CFDB /* Pods_HalykBank.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		3982E60C2C5FCBDB0099AAF0 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
@@ -93,6 +114,8 @@
 			children = (
 				39B641842C5E3563007BCA2B /* HalykBank */,
 				39B641832C5E3563007BCA2B /* Products */,
+				46C605514427A52ED564F707 /* Pods */,
+				00CF6DB5B730DF2559EDD270 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -107,17 +130,46 @@
 		39B641842C5E3563007BCA2B /* HalykBank */ = {
 			isa = PBXGroup;
 			children = (
+				39F509952C74B5C7003180B8 /* Models  */,
+				39F509912C74B3C7003180B8 /* Support */,
 				3982E60C2C5FCBDB0099AAF0 /* CustomViews */,
-				39B641852C5E3563007BCA2B /* AppDelegate.swift */,
-				39B641872C5E3563007BCA2B /* SceneDelegate.swift */,
-				39B641892C5E3563007BCA2B /* SignInVC.swift */,
-				39AD74912C6CAC6F002E4BF1 /* SignUpVC.swift */,
+				39B641892C5E3563007BCA2B /* LoginVC.swift */,
+				39AD74912C6CAC6F002E4BF1 /* RegisterVC.swift */,
 				39B6418B2C5E3563007BCA2B /* Main.storyboard */,
 				39B641902C5E3565007BCA2B /* LaunchScreen.storyboard */,
-				39B641932C5E3565007BCA2B /* Info.plist */,
 				39AB29AB2C6D2BBC00ACC963 /* Assets.xcassets 23-15-11-158.xcassets */,
+				39F509932C74B441003180B8 /* AuthService.swift */,
+				39F509982C74B723003180B8 /* HBErrors.swift */,
+				39F5099C2C74C0E3003180B8 /* GoogleService-Info.plist */,
+				39B641932C5E3565007BCA2B /* Info.plist */,
 			);
 			path = HalykBank;
+			sourceTree = "<group>";
+		};
+		39F509912C74B3C7003180B8 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				39B641852C5E3563007BCA2B /* AppDelegate.swift */,
+				39B641872C5E3563007BCA2B /* SceneDelegate.swift */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		39F509952C74B5C7003180B8 /* Models  */ = {
+			isa = PBXGroup;
+			children = (
+				39F509962C74B60A003180B8 /* RegisterUserRequest.swift */,
+			);
+			path = "Models ";
+			sourceTree = "<group>";
+		};
+		46C605514427A52ED564F707 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F2E5B3B539C226244E60B505 /* Pods-HalykBank.debug.xcconfig */,
+				08CABC0308C99AAE64F1CB91 /* Pods-HalykBank.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,9 +179,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 39B641962C5E3565007BCA2B /* Build configuration list for PBXNativeTarget "HalykBank" */;
 			buildPhases = (
+				F52AEE7B7FBC9699712CE5A9 /* [CP] Check Pods Manifest.lock */,
 				39B6417E2C5E3563007BCA2B /* Sources */,
 				39B6417F2C5E3563007BCA2B /* Frameworks */,
 				39B641802C5E3563007BCA2B /* Resources */,
+				34EEE4AB6CC84A87DA07E78E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -179,6 +233,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				39B641922C5E3565007BCA2B /* LaunchScreen.storyboard in Resources */,
+				39F5099D2C74C0E3003180B8 /* GoogleService-Info.plist in Resources */,
 				39AB29AC2C6D2BBC00ACC963 /* Assets.xcassets 23-15-11-158.xcassets in Resources */,
 				39B6418D2C5E3563007BCA2B /* Main.storyboard in Resources */,
 			);
@@ -186,18 +241,63 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		34EEE4AB6CC84A87DA07E78E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HalykBank/Pods-HalykBank-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HalykBank/Pods-HalykBank-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HalykBank/Pods-HalykBank-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F52AEE7B7FBC9699712CE5A9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HalykBank-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		39B6417E2C5E3563007BCA2B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				39B6418A2C5E3563007BCA2B /* SignInVC.swift in Sources */,
-				39AD74922C6CAC6F002E4BF1 /* SignUpVC.swift in Sources */,
+				39B6418A2C5E3563007BCA2B /* LoginVC.swift in Sources */,
+				39AD74922C6CAC6F002E4BF1 /* RegisterVC.swift in Sources */,
 				3982E60E2C5FCC390099AAF0 /* HBTitleLabel.swift in Sources */,
 				399140882C6D07C30069F187 /* HBCaptionLabel.swift in Sources */,
 				39B641862C5E3563007BCA2B /* AppDelegate.swift in Sources */,
+				39F509992C74B723003180B8 /* HBErrors.swift in Sources */,
+				39F509972C74B60A003180B8 /* RegisterUserRequest.swift in Sources */,
 				3982E6162C5FE7E20099AAF0 /* HBTextField.swift in Sources */,
 				3982E6192C60DBBC0099AAF0 /* HBButton.swift in Sources */,
+				39F509942C74B441003180B8 /* AuthService.swift in Sources */,
 				395A31042C628E20005551C3 /* HBSecondaryTitle.swift in Sources */,
 				39B641882C5E3563007BCA2B /* SceneDelegate.swift in Sources */,
 				3982E6122C5FD3D60099AAF0 /* HBSecondaryBodyLabel.swift in Sources */,
@@ -263,7 +363,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -326,7 +426,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -347,6 +447,7 @@
 		};
 		39B641972C5E3565007BCA2B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F2E5B3B539C226244E60B505 /* Pods-HalykBank.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -361,6 +462,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -376,6 +478,7 @@
 		};
 		39B641982C5E3565007BCA2B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 08CABC0308C99AAE64F1CB91 /* Pods-HalykBank.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -390,6 +493,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -24,6 +24,7 @@
 		39F509972C74B60A003180B8 /* RegisterUserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F509962C74B60A003180B8 /* RegisterUserRequest.swift */; };
 		39F509992C74B723003180B8 /* HBErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F509982C74B723003180B8 /* HBErrors.swift */; };
 		39F5099D2C74C0E3003180B8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 39F5099C2C74C0E3003180B8 /* GoogleService-Info.plist */; };
+		39F5099F2C74D96A003180B8 /* ForgotPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F5099E2C74D96A003180B8 /* ForgotPasswordVC.swift */; };
 		DF341D68E639BA543106FA1A /* Pods_HalykBank.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6966C21C2EFD92D846E6CFDB /* Pods_HalykBank.framework */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +49,7 @@
 		39F509962C74B60A003180B8 /* RegisterUserRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserRequest.swift; sourceTree = "<group>"; };
 		39F509982C74B723003180B8 /* HBErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HBErrors.swift; sourceTree = "<group>"; };
 		39F5099C2C74C0E3003180B8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		39F5099E2C74D96A003180B8 /* ForgotPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordVC.swift; sourceTree = "<group>"; };
 		6966C21C2EFD92D846E6CFDB /* Pods_HalykBank.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HalykBank.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2E5B3B539C226244E60B505 /* Pods-HalykBank.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HalykBank.debug.xcconfig"; path = "Target Support Files/Pods-HalykBank/Pods-HalykBank.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -142,6 +144,7 @@
 				39F509982C74B723003180B8 /* HBErrors.swift */,
 				39F5099C2C74C0E3003180B8 /* GoogleService-Info.plist */,
 				39B641932C5E3565007BCA2B /* Info.plist */,
+				39F5099E2C74D96A003180B8 /* ForgotPasswordVC.swift */,
 			);
 			path = HalykBank;
 			sourceTree = "<group>";
@@ -296,6 +299,7 @@
 				39F509992C74B723003180B8 /* HBErrors.swift in Sources */,
 				39F509972C74B60A003180B8 /* RegisterUserRequest.swift in Sources */,
 				3982E6162C5FE7E20099AAF0 /* HBTextField.swift in Sources */,
+				39F5099F2C74D96A003180B8 /* ForgotPasswordVC.swift in Sources */,
 				3982E6192C60DBBC0099AAF0 /* HBButton.swift in Sources */,
 				39F509942C74B441003180B8 /* AuthService.swift in Sources */,
 				395A31042C628E20005551C3 /* HBSecondaryTitle.swift in Sources */,

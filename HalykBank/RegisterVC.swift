@@ -208,16 +208,12 @@ class RegisterVC: UIViewController {
     
     private func setupTermsAndConditionsLabels() {
         whiteView.addSubview(termsAndConditionsLabel)
-//        whiteView.addSubview(termsAndConditionsLinkLabel)
         
         NSLayoutConstraint.activate([
             termsAndConditionsLabel.leadingAnchor.constraint(equalTo: checkBoxButton.trailingAnchor, constant: 12),
             termsAndConditionsLabel.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 20),
             termsAndConditionsLabel.trailingAnchor.constraint(equalTo: whiteView.trailingAnchor, constant: -62),
-            
-//            termsAndConditionsLinkLabel.leadingAnchor.constraint(equalTo: termsAndConditionsLabel.trailingAnchor),
-//            termsAndConditionsLabel.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 20),
-//            termsAndConditionsLabel.trailingAnchor.constraint(equalTo: whiteView.trailingAnchor, constant: 24)
+        
         ])
     }
 }
